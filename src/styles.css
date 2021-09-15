@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(73, 73, 73);
+  font-family: "Questrial", sans-serif;
+}
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(242, 123, 12);
+  margin-top: 80px;
+  width: 430px;
+  height: 480px;
+  border: 1px solid rgb(73, 73, 73);
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 0px 21px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 21px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 21px 1px rgba(0, 0, 0, 0.75);
+}
+
+.content-signup {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  align-self: stretch;
+  justify-content: space-between;
+  font-family: "Questrial", sans-serif;
+}
+
+.buttons {
+  padding: 7px;
+  color: rgb(242, 123, 12);
+  background: rgb(31, 31, 31);
+  border: 0px solid;
+  border-radius: 2rem;
+  font-family: "Questrial", sans-serif;
+  width: 100px;
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.buttons:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+
+.buttons:not(:hover) {
+  transition: 0.5s ease;
+}
+
+.input-signup {
+  border: 0px solid;
+  padding: 12px;
+  border-radius: 2rem;
+  font-size: 17px;
+  font-family: inherit;
+  font-weight: 600;
+  width: 70%;
+}
+
+.input-signup:focus {
+  outline-width: 0;
+  border: 1px solid rgba(109, 109, 109, 0.4);
+  -webkit-box-shadow: 0px 2px 7px 1px rgba(158, 98, 8, 1);
+  -moz-box-shadow: 0px 2px 7px 1px rgba(158, 98, 8, 1);
+  box-shadow: 0px 2px 7px 1px rgba(158, 98, 8, 1);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(51, 51, 51);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: rgb(242, 123, 12);
+  font-size: 19px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+li a:hover {
+  background: rgb(17, 17, 17);
+}
+
+.form-container {
+  font-family: "Questrial", sans-serif;
+  background-color: rgb(242, 123, 12);
+  border-radius: 3px;
+  padding: 30px;
+  width: 630px;
+  margin-top: 50px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form {
+  padding: 12px;
+  width: 450px;
+  height: 80px;
+  font-size: 19px;
+  border-radius: 10px;
+  border: 1px solid rgb(219, 111, 10);
+  font-family: inherit;
+  font-weight: 600;
+  resize: none;
+  color: rgb(31, 31, 31);
+}
+
+.input-form:focus {
+  outline-width: 0;
+  border: 1px solid rgba(109, 109, 109, 0.4);
+  -webkit-box-shadow: 0px 2px 7px 1px rgba(158, 98, 8, 1);
+  -moz-box-shadow: 0px 2px 7px 1px rgba(158, 98, 8, 1);
+  box-shadow: 0px 2px 7px 1px rgba(158, 98, 8, 1);
+}
+
+.post {
+  border: 0px solid;
+  background-color: rgb(219, 111, 10);
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 18px;
+  color: rgb(31, 31, 31);
+  margin: 25px;
+  word-wrap: break-word;
+}
+
+.like,
+.dislike {
+  background-color: rgb(73, 73, 73);
+  border: 0px solid rgb(56, 56, 56);
+  border-radius: 3px;
+  padding: 5px;
+  width: 50px;
+  cursor: pointer;
+  float: right;
+}
+
+.green {
+  color: green;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.red {
+  color: red;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  padding-top: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: rgb(51, 51, 51);
+  color: rgb(242, 123, 12);
+  margin: auto;
+  padding: 0;
+  font-size: 20px;
+  border: 3px solid rgb(242, 123, 12);
+  border-radius: 5px;
+  width: 70%;
+  min-height: 65vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: rgb(242, 123, 12);
+  color: rgb(51, 51, 51);
+  font-family: "Architects Daughter";
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+img {
+  border-radius: 50%;
+  border: 5px solid rgb(17, 17, 17);
+  position: fixed;
+  margin-top: 30px;
+}
+
+.userInfo {
+  margin-left: 350px;
+  margin-top: -30px;
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+.editInfo {
+  width: 30rem;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+input[type="file"] {
+  display: none;
+}
